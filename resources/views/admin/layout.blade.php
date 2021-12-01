@@ -189,23 +189,23 @@
             <li class="nav-item">
               <a class="nav-link" href="{{url('admin/dashboard')}}">
                 <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
               </a>
             </li>
-            <!--li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Jobber</span>
+                <span class="menu-title">Homepage</span>
                 <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                <i class="mdi mdi-home menu-icon"></i>
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{url('admin/homepage/banner')}}">Banner</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="">Header</a></li>
                 </ul>
               </div>
             </li>
-             <li class="nav-item">
+             <!--li class="nav-item">
               <a class="nav-link @yield('category')" href="{{url('')}}">
                 <span class="menu-title"></span>
                 <i class="mdi mdi-contacts menu-icon"></i>
@@ -315,6 +315,7 @@
     <!-- Custom js for this page -->
     <script src="{{asset('assets/js/dashboard.js')}}"></script>
     <script src="{{asset('assets/js/todolist.js')}}"></script>
+    <script src="{{asset('assets/js/file-upload.js')}}"></script>
     <!-- End custom js for this page -->
   </body>
 </html>

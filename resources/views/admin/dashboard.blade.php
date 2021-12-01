@@ -1,11 +1,11 @@
 @extends('admin/layout')
 @section('page_title','Dashboard')
 @section('container')
-<!-- Content Header (Page header) -->
+
 
    
 
-    @if(session()->has('message'))
+  @if(session()->has('message'))
   <div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
                       <span class="badge badge-pill badge-success"></span>
                       {{session('message')}}
