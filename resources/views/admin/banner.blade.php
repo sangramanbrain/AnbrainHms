@@ -20,7 +20,8 @@
                   <div class="card-body">
                     <h4 class="card-title">Banner Image</h4>
                     <p class="card-description">  </p>
-                    <form class="forms-sample">
+                    <form class="forms-sample" action="{{url('admin/banner/save')}}" method="post" enctype="multipart/form-data">
+                      @csrf
 
                       <div class="form-group">
                         <!--label>Image upload</label-->
@@ -32,12 +33,26 @@
                           </span>
                         </div>
                       </div>
-                     
+                      
+                      @if($data[0]['id']>0)
+                      <div class="form-group">
+                      <div class="row">
+                      <div class="col-12">
+                        <img src="{{asset('admin/bannerimage')}}/{{$data[0]['img']}}" class="mb-2 mw-100 w-100 rounded" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                  @endif
+
+                     <input type="hidden" name="id" value="{{$data[0]['id']}}">
+
                       <button type="submit" class="btn btn-gradient-primary mr-2">Save</button>
                       <a href="{{url('admin/dashboard')}}" class="btn btn-light">Cancel</a>
                     </form>
                   </div>
                 </div>
               </div>
+
+             
 
 @endsection

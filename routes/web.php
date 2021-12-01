@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\admin\bannerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,13 @@ Route::get('/', function () {
 
 Route::view('admin/dashboard','admin.dashboard');
 
-Route::view('admin/homepage/banner','admin.banner');
+Route::get('admin/homepage/banner',[bannerController::Class,'index']);
+
+Route::post('admin/banner/save',[bannerController::Class,'bannersave']);
 
 Route::view('admin/profile','admin.profile');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('/My-Account', [HomeController::Class, 'index']);
