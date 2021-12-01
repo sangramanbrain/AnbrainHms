@@ -25,9 +25,13 @@ Route::get('admin/homepage/banner',[bannerController::Class,'index']);
 
 Route::post('admin/banner/save',[bannerController::Class,'bannersave']);
 
+
 Route::view('admin/profile','admin.profile');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
 Route::get('/My-Account', [HomeController::Class, 'index']);
+
+Route::view('admin/profile','admin.profile');
+
