@@ -36,8 +36,8 @@
                       
                       @if($data[0]['id']>0)
                       <div class="form-group">
-                      <div class="row mt-3">
-                      <div class="col-12 pr-1">
+                      <div class="row">
+                      <div class="col-12">
                         <img src="{{asset('admin/bannerimage')}}/{{$data[0]['img']}}" class="mb-2 mw-100 w-100 rounded" alt="image">
                       </div>
                     </div>
