@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::view('admin/dashboard','admin.dashboard');
+
+Route::view('admin/homepage/banner','admin.banner');
+
+Route::view('admin/profile','admin.profile');
