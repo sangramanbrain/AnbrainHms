@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\admin\bannerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::view('admin/dashboard','admin.dashboard');
 
-Route::view('admin/homepage/banner','admin.banner');
+Route::get('admin/homepage/banner',[bannerController::Class,'index']);
+
+Route::post('admin/banner/save',[bannerController::Class,'bannersave']);
 
 Route::view('admin/profile','admin.profile');
