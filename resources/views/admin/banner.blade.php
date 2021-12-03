@@ -39,8 +39,7 @@
                       <div class="row">
                       <div class="col-12">
 
-                        <img src="{{asset('admin/bannerimage')}}/{{$data[0]['img']}}" class="mb-2 mw-100 w-100 rounded" alt="image">
-
+                       
                         <img src="{{asset('admin/bannerimage')}}/{{$data[0]['img']}}" height="100px" width="100px" alt="image">
 
                       </div>
